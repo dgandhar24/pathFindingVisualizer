@@ -4,7 +4,7 @@ let PATH_NODES_REVERSE = [];        //storing path traces in reverse order
 
 
 let N, M;
-let tile_side = 25; // w = h= 15px of tile
+let tile_side = 20; // w = h= 15px of tile
 let start_x, start_y, end_x, end_y;
 
 let MOUSEDOWN = false;
@@ -16,8 +16,8 @@ function generateGrid(){
     if(is_animation_running)
         return;
 
-    M = Math.floor(window.innerWidth/tile_side);
-    N = Math.floor(window.innerHeight*0.85/tile_side);
+    M = Math.floor(window.innerWidth*0.85/tile_side);
+    N = Math.floor(window.innerHeight*0.80/tile_side);
 
     start_x = Math.floor(N/2), start_y = Math.floor(M/5), end_x = Math.floor(N/2), end_y = Math.floor(4*M/5);
 
