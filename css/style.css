@@ -68,8 +68,8 @@ table {
 }
 
 td {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border: 1px solid rgb(179, 224, 255);
     border-collapse: collapse;
     box-sizing: border-box;

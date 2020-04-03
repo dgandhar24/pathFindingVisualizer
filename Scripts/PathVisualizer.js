@@ -3,15 +3,17 @@ let VISITED_NODES_IN_ORDER = [];    //storing visited nodes in order
 let PATH_NODES_REVERSE = [];        //storing path traces in reverse order
 
 
-let N, M;
-let tile_side = 20; // w = h= 15px of tile
-let start_x, start_y, end_x, end_y;
+let N, M;                           //no of rows, cols
+let tile_side = 25;                 // w = h= 15px of tile
+let start_x, start_y, end_x, end_y; //start, end node
 
-let MOUSEDOWN = false;
-let bfs_animation_id, path_animation_id;
-let is_animation_running = false;
-let start_node_clicked = false, end_node_clicked = false;
+let MOUSEDOWN = false;                                      //For mouse status
+let bfs_animation_id, path_animation_id;                    //ID's for setInterval() of bfs and, path animation.
+let is_animation_running = false;                           //Animation status
+let start_node_clicked = false, end_node_clicked = false;   //if star or end node is clicke or not.
 
+
+//function for dynamically generating grid.
 function generateGrid(){
     if(is_animation_running)
         return;
@@ -21,6 +23,7 @@ function generateGrid(){
 
     start_x = Math.floor(N/2), start_y = Math.floor(M/5), end_x = Math.floor(N/2), end_y = Math.floor(4*M/5);
 
+    //Generatiing grid.
     let grid = document.getElementById("grid");
     let strHTML = "";
     for(let i = 0; i < N; i++){
@@ -31,6 +34,8 @@ function generateGrid(){
         strHTML += "</tr>\n";
     }
     grid.innerHTML = strHTML;
+    
+    //Getting grid and setting start and end nodes in grid.
     GRID = document.getElementsByTagName("tr"); 
     console.log(GRID);
     GRID[start_x].children[start_y].className = "node-start";
