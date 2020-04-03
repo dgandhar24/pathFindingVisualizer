@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="generateGrid()" onresize="generateGrid()">
+    <div class = "navbar">
+        <button onclick="generateGrid()" class="left nav-element">Clear Grid</button>
+        <!-- <span class="left nav-element selected">Merge Sort</span>
+        <span class="left nav-element sort">Bubble Sort</span>
+        <span class="left nav-element sort">Quick Sort</span>
+        <span class="left nav-element sort">Heap Sort</span> -->
+
+        <button onclick="findPath()" class="left nav-element">Visualize Breadth First Search</button>
+        </ul>
+    </div>    
+
+    <div class="container">
+            <table id="grid">
+                
+            </table>
+    </div>
+
+    <script src="Scripts/PathVisualizer.js"></script>
+</body>
+
+</html>
